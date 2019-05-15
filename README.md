@@ -62,6 +62,10 @@ docker run -it --rm -p 8888:8888 -v $PWD:/home/jovyan/work -e PL_API_KEY='[YOUR-
 RUN THE CONTAINER AND MAP TO host directory agr10/planet_test_data
 docker run -it --rm -p 8888:8888 -v /home/agr10/planet_test_data:/home/jovyan/work -e PL_API_KEY='[YOUR-API-KEY]' planet-notebooks
 ```
+```bash
+RUN THE CONTAINER AND MAP TO host directory agr10/planet_test_data AND ADD SUDO PRIVILEGES
+docker run -it --rm -p 8888:8888 -v /home/agr10/planet_test_data:/home/jovyan/work -e GRANT_SUDO=yes PL_API_KEY='[YOUR-API-KEY]' planet-notebooks
+```
 This does several things:  
 
 1. Maps the docker container's ```8888``` port to your system's ```8888``` port.  This makes the 
