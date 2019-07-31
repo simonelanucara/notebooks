@@ -9,7 +9,8 @@ FROM jupyter/minimal-notebook:2c80cf3537ca
 
 #RUN conda install -y -c conda-forge gdal=2.3.1
 #conda install gdal commented becouse gdal 2.3.1 is not avaliable anymore on conda
-RUN conda install -y -c conda-forge gdal=2.4.0
+#RUN conda install -y -c conda-forge gdal=2.4.0
+RUN conda install -y -c conda-forge gdal=3.0.1
 
 # Add pip shortcut and install Python3 packages
 COPY requirements.txt .
